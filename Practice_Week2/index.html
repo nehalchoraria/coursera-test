@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Hello Coursera</title>
+  </head>
+  <body>
+    <h1>Name Calculator</h1>
+    <div ng-controller="myFirstController">
+      <input type="text" ng-model="name" ng-keyup="displayNumeric()" ng-blur="upperCase()">
+      <br>
+      Inside my input is {{totalValue}}
+      <br>
+      Total Cost : {{ totalcost | currency : "$" : 4}}
+      <br>
+      Normal : {{sayLikeMessage()}}
+      <br>
+      Filter : {{sayLoveMessage()}}
+      <br>
+      Html Filter : {{ sayLikeMessage() | loves : "like" : "love" }}
+      <br>
+      Multiple Filter : {{ sayLikeMessage() | loves : "like" : "love" | uppercase }}
+
+    </div>
+
+  </body>
+</html>
