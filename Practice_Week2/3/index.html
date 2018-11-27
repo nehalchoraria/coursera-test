@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Hello Coursera</title>
+  </head>
+  <body>
+    <h1>Shopping List App</h1>
+    <div ng-controller="myFirstController">  <!-- Ng controller automatically calls a function -->
+        
+        Search item in List 1
+        <input type="text" ng-model="searchitem" placeholder="Search item"> <!--This serchitem has 2 way binding
+                                                                            Auto updates itself via filter -->
+        <br><br>
+
+        <input type="text" ng-model="itemname" placeholder="Add item">
+        <input type="text" ng-model="itemvalue" placeholder="Add quantity">
+        <button ng-click="additem()">Add item</button>
+        
+        <li ng-repeat="item in shoppingList1 | filter : searchitem">{{item}}</li>
+        <br>
+        <li ng-repeat="item in shoppingList2">{{item.name}} : {{item.quantity}}</li>
+      <br>
+    </div>
+
+  </body>
+</html>
