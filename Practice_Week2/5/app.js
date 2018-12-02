@@ -38,7 +38,6 @@ function ShoppingListController2(ShoppingListFactory) {
   var shoppingList = ShoppingListFactory(3);
 
   list2.items = shoppingList.getItems();
-
   list2.itemName = "";
   list2.itemQuantity = "";
 
