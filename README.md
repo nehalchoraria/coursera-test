@@ -1,3 +1,3 @@
 # coursera-test
 
-https://nehalchoraria.github.io/
+https://nehalchoraria.github.io/coursera-test/
