@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Hello Coursera</title>
+  </head>
+  <body>
+    <h1>Custom Service</h1>
+
+    <div ng-controller="ShoppingListAddController as itemAdder">
+      <input type="text" ng-model="itemAdder.name">
+      <input type="text" ng-model="itemAdder.quantity"> Boxes
+        <button ng-click="itemAdder.addItem()">Add item to list</button>
+    </div>
+
+    <div ng-controller="ShoppingListShowController as viewList">
+      <ol><li ng-repeat="item in viewList.items">
+        {{ item.itemName }} : {{ item.itemQuantity }} Boxes
+      <button ng-click="viewList.removeItem($index)">Remove</button>
+      </ol></li>
+    </div>
+
+  </body>
+</html>
