@@ -1,0 +1,6 @@
+<ol><li ng-repeat="item in ctrl.foundItems">
+<b>  {{ item.name }} </b>
+     {{ item.desc }}
+<button ng-click="ctrl.removeItem($index)">Remove</button>
+</ol></li>
+<div class="error" ng-if="ctrl.checkEmpty()">Sorry! Nothing found!</div>
